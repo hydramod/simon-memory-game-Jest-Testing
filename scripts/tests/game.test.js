@@ -100,8 +100,14 @@ describe("gameplay works correctly", () => {
         playerTurn();
         expect(window.alert).toBeCalledWith("Wrong move!");
     });
-    test("check if turnInProgress key is true", () => {
+    test("check if turnInProgress key is toggled", () => {
         showTurns();
         expect(game.turnInProgress).toBe(true);
-    })
+    });
+    test("clicking during computer sequence should fail", () => {
+        showTurns();
+        game.lastButton = "";
+        document.getElementById("button2").click();
+        expect(game.lastButton).toEqual("");
+    });
 });
