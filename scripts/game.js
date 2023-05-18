@@ -2,7 +2,8 @@ let game = {
     score: 0,
     currentGame: [],
     playerMoves: [],
-    choices: ["button1", "button2", "button3", "button4"]
+    choices: ["button1", "button2", "button3", "button4"],
+    turnNumber: 0
 };
 
 function newGame() {
