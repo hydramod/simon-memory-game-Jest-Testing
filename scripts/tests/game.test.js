@@ -18,7 +18,7 @@ describe("game object contains correct keys", () => {
     test("score key exists", () => {
         expect("score" in game).toBe(true);
     });
-    
+
     test("currentGame key exists", () => {
         expect("currentGame" in game).toBe(true);
     });
@@ -100,4 +100,8 @@ describe("gameplay works correctly", () => {
         playerTurn();
         expect(window.alert).toBeCalledWith("Wrong move!");
     });
+    test("check if turnInProgress key is true", () => {
+        showTurns();
+        expect(game.turnInProgress).toBe(true);
+    })
 });
